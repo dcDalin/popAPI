@@ -11,7 +11,7 @@ import ErrorHandler from './middlewares/error';
 import UserRouter from './routes/user';
 import UtilMiddleware from './middlewares/utilMiddlewares.js';
 
-const database = process.env.DATABASE_URL || 'mongodb+srv://creez:root@cluster0-w8dbn.mongodb.net/test?retryWrites=true&w=majority';
+const database = process.env.DATABASE_URL
 
 const app = express();
 mongoose.connect(database, { useNewUrlParser: true });
