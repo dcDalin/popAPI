@@ -3,7 +3,7 @@
   "info": {
     "description": "POPULATION MANAGEMENT API",
     "version": "1.0.0",
-    "title": "Population Management API",
+    "title": "Pop Management API",
     "contact": {
       "email": "mcdalinoluoch@gmail.com"
     },
@@ -12,7 +12,7 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   },
-  "host": "localhost:5000",
+  "host": "https://pop-api-lms.herokuapp.com/",
   "basePath": "/api/v1/",
   "tags": [{
       "name": "Users",
