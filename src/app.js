@@ -3,9 +3,6 @@ import morgan from "morgan";
 import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
-import swaggerUi from "swagger-ui-express";
-
-import swaggerDocument from "./swagger.json";
 import LocationsRouter from "./routes/locations";
 import ErrorHandler from "./middlewares/error";
 import UserRouter from "./routes/user";
@@ -24,7 +21,6 @@ app.use(morgan("dev"));
 app.options("*", cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/api/v1/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Resources
 app.use("/api/v1/locations", UtilMiddleware.authenticate, LocationsRouter);
