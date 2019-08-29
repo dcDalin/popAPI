@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node bin/dev",
-    "build": "babel src -d lib",
     "test": "babel-node src/database/database.js && mocha --require @babel/register 'test/**/**spec.js' --exit",
+    "clean": "rm -rf build",
+    "build": "npm run clean && babel src -d build",
+    "start": "npm run build && node ./build/index.js",
     "lint": "eslint 'src/**/*.js' --fix",
     "format": "prettier-eslint 'server/**/*.{js,json}' --write",
     "db:migrate": "babel-node src/database/database.js"
