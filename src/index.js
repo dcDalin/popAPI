@@ -10,7 +10,7 @@ app.use(
   }),
 );
 
-const PORT = process.env.PORT || 4000;
+const { PORT } = process.env;
 
 app.use(bodyParser.json());
 

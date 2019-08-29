@@ -1,10 +1,10 @@
 import { Pool } from 'pg';
 
 const conn = {
-  user: 'dc_dalin',
-  host: 'localhost',
-  database: 'population',
-  password: 'Password123!',
+  user: process.env.DB_USER || 'dc_dalin',
+  host: process.env.DB_HOST || 'localhost',
+  database: process.env.DB_NAME || 'population',
+  password: process.env.DB_PASS || 'Password123!',
   port: 5432,
 };
 
