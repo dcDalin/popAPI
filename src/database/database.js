@@ -9,10 +9,10 @@ import pool from './index';
   const county = `CREATE TABLE IF NOT EXISTS county (
     id serial PRIMARY KEY,
     name VARCHAR(255) NOT NULL UNIQUE,
-    totalMale  VARCHAR(255) NOT NULL,
-    totalFemale  VARCHAR(255) NOT NULL,
-    totalPopulation VARCHAR(255),
-    createdOn TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    total_male INTEGER,
+    total_female INTEGER,
+    total_population INTEGER,
+    created_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )`;
 
   const sub_county = `CREATE TABLE IF NOT EXISTS sub_county (
@@ -21,14 +21,14 @@ import pool from './index';
     male VARCHAR(255) NOT NULL,
     female VARCHAR(255) NOT NULL,
     total VARCHAR(255) NOT NULL,
-    countyId INTEGER REFERENCES county (id) ON DELETE CASCADE,
-    createdOn TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    county_id INTEGER REFERENCES county (id) ON DELETE CASCADE,
+    created_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   )`;
 
   await pool.query(dropTables);
   console.log('Dropping tables');
   await pool.query(county);
-  console.log('users created');
+  console.log('county created');
   await pool.query(sub_county);
   console.log('sub_county created');
 })();

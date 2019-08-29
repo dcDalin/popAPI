@@ -9,8 +9,11 @@ countyRouter.post('/', countyController.newCounty);
 // View All Counties
 countyRouter.get('/', countyController.allCounties);
 
+// View County By Id
+countyRouter.get('/:id', countyController.singleCounty);
+
 // Edit County by ID
-countyRouter.patch('/:id', countyController.editCounty);
+countyRouter.put('/:id', countyController.editCounty);
 
 // Delete County
 countyRouter.delete('/:id', countyController.deleteCounty);
