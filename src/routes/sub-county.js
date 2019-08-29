@@ -1,18 +1,18 @@
-// import express from 'express';
-// import subCountyController from '../controllers/subCountyController';
+import express from 'express';
+import subCountyController from '../controllers/subCountyController';
 
-// const subCountyRouter = express.Router();
+const subCountyRouter = express.Router();
 
-// // New Sub County
-// subCountyRouter.post('/', subCountyController.newCounty);
+// New Sub County
+subCountyRouter.post('/:id', subCountyController.newSubCounty);
 
-// // View All Sub Counties
-// subCountyRouter.get('/', subCountyController.allCounties);
+// All Sub Counties
+subCountyRouter.get('/', subCountyController.allSubCounties);
 
-// // Edit Sub County by ID
-// subCountyRouter.patch('/:id', subCountyController.editCounty);
+// Edit Sub County by ID
+subCountyRouter.put('/:id', subCountyController.editSubCounty);
 
-// // Delete Sub County
-// subCountyRouter.delete('/:id', subCountyController.deleteCounty);
+// Delete Sub County
+subCountyRouter.delete('/:id', subCountyController.deleteSubCounty);
 
-// export default subCountyRouter;
+export default subCountyRouter;

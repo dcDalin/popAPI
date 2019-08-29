@@ -18,9 +18,9 @@ import pool from './index';
   const sub_county = `CREATE TABLE IF NOT EXISTS sub_county (
     id serial PRIMARY KEY,
     name  VARCHAR(255) NOT NULL UNIQUE,
-    male VARCHAR(255) NOT NULL,
-    female VARCHAR(255) NOT NULL,
-    total VARCHAR(255) NOT NULL,
+    male INTEGER NOT NULL,
+    female INTEGER NOT NULL,
+    total INTEGER NOT NULL,
     county_id INTEGER REFERENCES county (id) ON DELETE CASCADE,
     created_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   )`;

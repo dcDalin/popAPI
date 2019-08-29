@@ -33,6 +33,7 @@ class countyController {
           message: error,
         });
       }
+
       return res.json({
         message: 'List of all Counties',
         properties: results.rows,
