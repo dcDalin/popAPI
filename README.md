@@ -1,5 +1,7 @@
 # popAPI
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/735d130c96cdd50696d0)
+
 ## API Endpoints
 
 | Endpoint                                               | Functionality       | HTTP method |
